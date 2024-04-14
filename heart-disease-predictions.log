@@ -1,0 +1,124 @@
+11.5s 1 /opt/conda/lib/python3.7/site-packages/papermill/iorw.py:50: FutureWarning: pyarrow.HadoopFileSystem is deprecated as of 2.0.0, please use pyarrow.fs.HadoopFileSystem instead.
+11.5s 2 from pyarrow import HadoopFileSystem
+13.1s 3 /kaggle/input/heart-disease/heart.csv
+13.3s 4 Shape of the data is  (303, 14)
+13.3s 5 age  sex  cp  trestbps  chol  fbs  restecg  thalach  exang  oldpeak  \
+13.3s 6 0     63    1   3       145   233    1        0      150      0      2.3
+13.3s 7 1     37    1   2       130   250    0        1      187      0      3.5
+13.3s 8 2     41    0   1       130   204    0        0      172      0      1.4
+13.3s 9 3     56    1   1       120   236    0        1      178      0      0.8
+13.3s 10 4     57    0   0       120   354    0        1      163      1      0.6
+13.3s 11 ..   ...  ...  ..       ...   ...  ...      ...      ...    ...      ...
+13.3s 12 298   57    0   0       140   241    0        1      123      1      0.2
+13.3s 13 299   45    1   3       110   264    0        1      132      0      1.2
+13.3s 14 300   68    1   0       144   193    1        1      141      0      3.4
+13.3s 15 301   57    1   0       130   131    0        1      115      1      1.2
+13.3s 16 302   57    0   1       130   236    0        0      174      0      0.0
+13.3s 17 
+13.3s 18 slope  ca  thal
+13.3s 19 0        0   0     1
+13.3s 20 1        0   0     2
+13.3s 21 2        2   0     2
+13.3s 22 3        2   0     2
+13.3s 23 4        2   0     2
+13.3s 24 ..     ...  ..   ...
+13.3s 25 298      1   0     3
+13.3s 26 299      1   0     3
+13.3s 27 300      1   2     3
+13.3s 28 301      1   1     3
+13.3s 29 302      1   1     2
+13.3s 30 
+13.3s 31 [303 rows x 13 columns]
+13.3s 32 0      1
+13.3s 33 1      1
+13.3s 34 2      1
+13.3s 35 3      1
+13.3s 36 4      1
+13.3s 37 ..
+13.3s 38 298    0
+13.3s 39 299    0
+13.3s 40 300    0
+13.3s 41 301    0
+13.3s 42 302    0
+13.3s 43 Name: target, Length: 303, dtype: int64
+13.7s 44 <class 'pandas.core.frame.DataFrame'>
+13.7s 45 RangeIndex: 303 entries, 0 to 302
+13.7s 46 Data columns (total 14 columns):
+13.7s 47 #   Column    Non-Null Count  Dtype
+13.7s 48 ---  ------    --------------  -----
+13.7s 49 0   age       303 non-null    int64
+13.7s 50 1   sex       303 non-null    int64
+13.7s 51 2   cp        303 non-null    int64
+13.7s 52 3   trestbps  303 non-null    int64
+13.7s 53 4   chol      303 non-null    int64
+13.7s 54 5   fbs       303 non-null    int64
+13.7s 55 6   restecg   303 non-null    int64
+13.7s 56 7   thalach   303 non-null    int64
+13.7s 57 8   exang     303 non-null    int64
+13.7s 58 9   oldpeak   303 non-null    float64
+13.7s 59 10  slope     303 non-null    int64
+13.7s 60 11  ca        303 non-null    int64
+13.7s 61 12  thal      303 non-null    int64
+13.7s 62 13  target    303 non-null    int64
+13.7s 63 dtypes: float64(1), int64(13)
+13.7s 64 memory usage: 33.3 KB
+17.5s 65 Traceback (most recent call last):
+17.5s 66 File "<string>", line 1, in <module>
+17.5s 67 File "/opt/conda/lib/python3.7/site-packages/papermill/execute.py", line 122, in execute_notebook
+17.5s 68 raise_for_execution_errors(nb, output_path)
+17.5s 69 File "/opt/conda/lib/python3.7/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
+17.5s 70 raise error
+17.5s 71 papermill.exceptions.PapermillExecutionError:
+17.5s 72 ---------------------------------------------------------------------------
+17.5s 73 Exception encountered at "In [10]":
+17.5s 74 ---------------------------------------------------------------------------
+17.5s 75 KeyError                                  Traceback (most recent call last)
+17.5s 76 /opt/conda/lib/python3.7/site-packages/pandas/core/indexes/base.py in get_loc(self, key, method, tolerance)
+17.5s 77 3079             try:
+17.5s 78 -> 3080                 return self._engine.get_loc(casted_key)
+17.5s 79 3081             except KeyError as err:
+17.5s 80 
+17.5s 81 pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
+17.5s 82 
+17.5s 83 pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
+17.5s 84 
+17.5s 85 pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
+17.5s 86 
+17.5s 87 pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
+17.5s 88 
+17.5s 89 KeyError: 'chest_pain_type'
+17.5s 90 
+17.5s 91 The above exception was the direct cause of the following exception:
+17.5s 92 
+17.5s 93 KeyError                                  Traceback (most recent call last)
+17.5s 94 <ipython-input-10-2b6dea2f2f43> in <module>
+17.5s 95 2 data['sex'][data['sex'] == 1] = 'male'
+17.5s 96 3
+17.5s 97 ----> 4 data['chest_pain_type'][data['chest_pain_type'] == 0] = 'typical angina'
+17.5s 98 5 data['chest_pain_type'][data['chest_pain_type'] == 1] = 'atypical angina'
+17.5s 99 6 data['chest_pain_type'][data['chest_pain_type'] == 2] = 'non-anginal pain'
+17.5s 100 
+17.5s 101 /opt/conda/lib/python3.7/site-packages/pandas/core/frame.py in __getitem__(self, key)
+17.5s 102 3022             if self.columns.nlevels > 1:
+17.5s 103 3023                 return self._getitem_multilevel(key)
+17.5s 104 -> 3024             indexer = self.columns.get_loc(key)
+17.5s 105 3025             if is_integer(indexer):
+17.5s 106 3026                 indexer = [indexer]
+17.5s 107 
+17.5s 108 /opt/conda/lib/python3.7/site-packages/pandas/core/indexes/base.py in get_loc(self, key, method, tolerance)
+17.5s 109 3080                 return self._engine.get_loc(casted_key)
+17.5s 110 3081             except KeyError as err:
+17.5s 111 -> 3082                 raise KeyError(key) from err
+17.5s 112 3083
+17.5s 113 3084         if tolerance is not None:
+17.5s 114 
+17.5s 115 KeyError: 'chest_pain_type'
+17.5s 116 
+19.1s 117 /opt/conda/lib/python3.7/site-packages/traitlets/traitlets.py:2561: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+19.1s 118 FutureWarning,
+19.1s 119 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+19.7s 120 [NbConvertApp] Writing 103081 bytes to __notebook__.ipynb
+21.0s 121 /opt/conda/lib/python3.7/site-packages/traitlets/traitlets.py:2561: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+21.0s 122 FutureWarning,
+21.0s 123 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+22.2s 124 [NbConvertApp] Writing 412941 bytes to __results__.html
